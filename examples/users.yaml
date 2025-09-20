@@ -1,0 +1,11 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Terre8055
+  annotations:
+    google.com/email: michael@reallygreattech.com
+spec:
+  memberOf: [infrastructure, twitter-agent, elcam, rgtportal]
+  profile:
+    email: michael@reallygreattech.com

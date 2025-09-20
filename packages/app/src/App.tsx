@@ -38,6 +38,8 @@ import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/
 import { NotificationsPage } from '@backstage/plugin-notifications';
 import { SignalsDisplay } from '@backstage/plugin-signals';
 import { githubAuthApiRef } from '@backstage/core-plugin-api';
+import { googleAuthApiRef } from '@backstage/core-plugin-api';
+import { configApiRef, useApi } from '@backstage/core-plugin-api';
 
 const app = createApp({
   apis,
@@ -58,23 +60,29 @@ const app = createApp({
       catalogIndex: catalogPlugin.routes.catalogIndex,
     });
   },
-  // components: {
-  //   SignInPage: props => <SignInPage {...props} auto providers={['guest']} />,
-  // },
 components: {
-  SignInPage: props => (
-    <SignInPage
-      {...props}
-      auto
-      provider={{
-        id: 'github-auth-provider',
-        title: 'GitHub',
-        message: 'Sign in using GitHub',
-        apiRef: githubAuthApiRef,
-      }}
-    />
-  ),
-},
+    SignInPage: props => {
+        return (
+          <SignInPage
+            {...props}
+            providers={[
+              {
+                id: 'github-auth-provider',
+                title: 'GitHub',
+                message: 'Sign in using GitHub',
+                apiRef: githubAuthApiRef,
+              },
+            {
+            id: 'google-auth-provider',
+            title: 'Google',
+              message: 'Sign in using Google',
+            apiRef: googleAuthApiRef,
+            },
+          ]}
+        />
+      );
+    },
+  },
 });
 
 const routes = (
@@ -125,3 +133,4 @@ export default app.createRoot(
     </AppRouter>
   </>,
 );
+

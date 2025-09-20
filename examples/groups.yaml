@@ -1,0 +1,158 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Ops
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: infrastructure
+  description: The infra business unit
+spec:
+  type: team
+  profile:
+    displayName: Infrastructure
+    email: infrastructure@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  parent: Ops
+  children: []
+  members: [Terre8055]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: internal
+  description: Internal Projects
+spec:
+  type: team
+  profile:
+    displayName: Internal Projects
+  children: [rgtportal, tickr, twitter-agent]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: external
+  description: External Projects
+spec:
+  type: team
+  profile:
+    displayName: External Projects
+  children: [wabi, elcam, academic, semler]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: rgtportal
+spec:
+  type: team
+  profile:
+    displayName: RGT Portal
+  parent: internal
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: tickr
+spec:
+  type: team
+  profile:
+    displayName: Tickr
+  parent: internal
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: twitter-agent
+  links:
+    - url: "https://app.dt42.com"
+      title: Twitter Agent UI Production
+      icon: web
+      type: Production
+    - url: "https://dev.dt42.com"
+      title: Twitter Agent UI Development
+      icon: web
+      type: development
+    - url: "https://github.com/RGT-DevOps/eliza-zaphod"
+      title: Zaphod Repository
+      icon: github
+      type: source-code
+    - url: "https://github.com/RGT-DevOps/eliza"
+      title: Deepthought Repository
+      icon: github
+      type: source-code
+    - url: "https://github.com/RGT-DevOps/eliza-ui"
+      title: Web UI Repository
+      icon: github
+      type: source-code
+    - url: "https://github.com/RGT-DevOps/eliza-rag2"
+      title: RAG Repository
+      icon: github
+      type: source-code
+    - url: "https://docs.google.com/document/d/1r68yhK0imcVMCA0_v6cbkU2ydl5MmS1v26oT831M8ZQ/edit?usp=sharing"
+      title: Documentation
+      icon: book
+      type: documentation
+spec:
+  type: team
+  profile:
+    displayName: Twitter Agent
+  parent: internal
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: wabi
+spec:
+  type: team
+  profile:
+    displayName: Wabi
+  parent: external
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: elcam
+  description: Elcam Project Team
+  links:
+    - url: "http://staging-elcam.s3-website-eu-west-1.amazonaws.com/login"
+      title: Elcam Staging
+      icon: chat
+spec:
+  type: team
+  profile:
+    displayName: Elcam
+    email: elcam@reallygreattech.com
+  parent: external
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: academic
+spec:
+  type: team
+  profile:
+    displayName: Academic
+  parent: external
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: semler
+spec:
+  type: team
+  profile:
+    displayName: Semler
+  parent: external
+  children: []
