@@ -2,72 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: teamdeck
-  description: An example of a Backstage application.
-  # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  description: "Codebase for teamdeck"
+  annotations:
+    github.com/project-slug: RGT-DevOps/teamdeck
 spec:
-  type: website
-  owner: john@example.com
+  type: service
   lifecycle: experimental
-# context": "app-config.yaml",
-#     "filteredKeys": [
-#       "backend.listen.port",
-#       "backend.csp.connect-src[0]",
-#       "backend.csp.connect-src[1]",
-#       "backend.csp.connect-src[2]",
-#       "backend.cors.origin",
-#       "backend.cors.methods[0]",
-#       "backend.cors.methods[1]",
-#       "backend.cors.methods[2]",
-#       "backend.cors.methods[3]",
-#       "backend.cors.methods[4]",
-#       "backend.cors.methods[5]",
-#       "backend.cors.credentials",
-#       "backend.database.client",
-#       "backend.database.connection.host",
-#       "backend.database.connection.port",
-#       "backend.database.connection.user",
-#       "backend.database.connection.password",
-#       "backend.database.connection.database",
-#       "integrations.github[0].token",
-#       "techdocs.generator.runIn",
-#       "techdocs.publisher.type",
-#       "auth.providers.github.development.clientId",
-#       "auth.providers.github.development.clientSecret",
-#       "auth.providers.github.development.apps[0].appId",
-#       "auth.providers.github.development.apps[0].webhookUrl",
-#       "auth.providers.github.development.apps[0].clientId",
-#       "auth.providers.github.development.apps[0].clientSecret",
-#       "auth.providers.github.development.apps[0].webhookSecret",
-#       "auth.providers.github.development.apps[0].privateKey",
-#       "auth.providers.github.development.apps[1].appId",
-#       "auth.providers.github.development.apps[1].webhookUrl",
-#       "auth.providers.github.development.apps[1].clientId",
-#       "auth.providers.github.development.apps[1].clientSecret",
-#       "auth.providers.github.development.apps[1].webhookSecret",
-#       "auth.providers.github.development.apps[1].privateKey",
-#       "auth.providers.github.development.signIn.resolvers[0].resolver",
-#       "auth.providers.google.development.clientId",
-#       "auth.providers.google.development.clientSecret",
-#       "auth.providers.google.development.signIn.resolvers[0].resolver",
-#       "catalog.rules[0].allow[0]",
-#       "catalog.rules[0].allow[1]",
-#       "catalog.rules[0].allow[2]",
-#       "catalog.rules[0].allow[3]",
-#       "catalog.rules[0].allow[4]",
-#       "catalog.locations[0].type",
-#       "catalog.locations[0].target",
-#       "catalog.locations[1].type",
-#       "catalog.locations[1].target",
-#       "catalog.locations[1].rules[0].allow[0]",
-#       "catalog.locations[2].type",
-#       "catalog.locations[2].target",
-#       "catalog.locations[2].rules[0].allow[0]",
-#       "catalog.locations[2].rules[0].allow[1]",
-#       "catalog.locations[3].type",
-#       "catalog.locations[3].target",
-#       "catalog.locations[3].rules[0].allow[0]",
-#       "catalog.locations[3].rules[0].allow[1]"
-#     ],
+  owner: ops

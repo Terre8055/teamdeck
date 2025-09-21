@@ -6,7 +6,7 @@ metadata:
   name: Ops
 spec:
   type: team
-  children: []
+  children: [teamdeck]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -53,6 +53,17 @@ spec:
   type: team
   profile:
     displayName: RGT Portal
+  parent: internal
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: teamdeck
+spec:
+  type: team
+  profile:
+    displayName: Teamdeck
   parent: internal
   children: []
 ---
