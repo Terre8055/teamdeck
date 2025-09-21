@@ -5,6 +5,7 @@ import {
   CatalogIndexPage,
   catalogPlugin,
 } from '@backstage/plugin-catalog';
+import { GithubAccessPage } from './components/access/GithubAccessPage';
 import {
   CatalogImportPage,
   catalogImportPlugin,
@@ -106,6 +107,7 @@ const routes = (
     </Route>
     <Route path="/create" element={<ScaffolderPage />} />
     <Route path="/api-docs" element={<ApiExplorerPage />} />
+    <Route path="/github-access" element={<GithubAccessPage />} />
     <Route
       path="/catalog-import"
       element={

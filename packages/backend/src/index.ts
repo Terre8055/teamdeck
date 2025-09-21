@@ -7,8 +7,10 @@
  */
 
 import { createBackend } from '@backstage/backend-defaults';
+// import { githubAccessPlugin } from '@backstage/plugin-github-access-backend';
 
-import dotenv from 'dotenv';
+
+// import dotenv from 'dotenv';
 
 // dotenv.config({ path: '../../.env' });
 
@@ -81,5 +83,11 @@ backend.add(import('@backstage/plugin-catalog-backend-module-github-org'));
 backend.add(import('@backstage/plugin-catalog-backend-module-github'));
 
 backend.add(import('@backstage/plugin-events-backend-module-github'));
+
+// backend.add(githubAccessPlugin);
+backend.add(import('@internal/plugin-github-access-backend'));
+
+
+
 
 backend.start();
