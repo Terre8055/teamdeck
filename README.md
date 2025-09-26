@@ -1,4 +1,4 @@
-# Teamdeck - RGT DevOps Backstage Platform
+# Teamdeck - DevOps Backstage Platform
 
 A comprehensive [Backstage.io](https://backstage.io/) platform designed for DevOps teams, featuring automated GitHub repository access management, catalog-driven development workflows, and integrated authentication systems.
 
